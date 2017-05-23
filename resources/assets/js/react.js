@@ -1,3 +1,4 @@
-window.React = require('react');
+React = require('react');
+ReactDOM = require('react-dom');
 
-alert("React");
+RootElement = document.getElementById('react-root');
