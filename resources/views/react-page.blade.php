@@ -5,8 +5,8 @@
 
 	</head>
 	<body>
-		<h1>React</h1>
-		<div id="react-root"></div>
+		<h1 id="react-page-header"></h1>
+		<div id="react-page-root"></div>
 	</body>
 	<script src="js/react.js"></script>
 	<script src="js/main-react.js"></script>
