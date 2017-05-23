@@ -11,5 +11,4 @@ const { mix } = require('laravel-mix');
  |
  */
 
-mix.copy('resources/assets/js/components', 'public/js/components');
 mix.js('resources/assets/js/vue.js', 'public/js');

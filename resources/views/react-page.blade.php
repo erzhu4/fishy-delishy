@@ -9,10 +9,5 @@
 		<div id="react-root"></div>
 	</body>
 	<script src="js/react.js"></script>
-	<script>
-		ReactDOM.render(
-		  React.createElement('h1', null, 'Hello World'),
-		  RootElement
-		);
-	</script>
+	<script src="js/main-react.js"></script>
 </html>
