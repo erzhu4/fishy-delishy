@@ -2,10 +2,22 @@
 
 namespace App\Http\Controllers;
 
-class Controller extends BaseController {
+class HomeController extends Controller {
+
+	public function test(){
+		return "sdfadsfdsa";
+	}
 
 	public function index(){
-		return "HI";
+		return view('index');
+	}
+
+	public function renderVuePage(){
+		return view('vue-page');
+	}
+
+	public function renderReactPage(){
+		return view('react-page');
 	}
 	
 }
