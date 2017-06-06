@@ -64,7 +64,48 @@ console.log(unHash(x));
 
 
 
+//trap rain
 
+var getMaxValue = function(arr){
+	var max = 0;
+	for (var i = 0; i < arr.length; i++){
+		if (arr[i] > max){
+			max = arr[i];
+		}
+	}
+	return max;
+}
+
+var countInBetween = function(arr, val){
+	var startCount = false;
+	var count = 0;
+	var tempCount = 0;
+	for (var i = 0; i < arr.length; i++){
+		if (arr[i] >= val && !startCount){
+			startCount = true;
+			continue;
+		} else if (arr[i] < val && startCount){
+			tempCount += 1;
+		} else if (arr[i] >= val && startCount && tempCount > 0){
+			startCount = false;
+			count += tempCount;
+			tempCount = 0;
+			continue;
+		}
+
+	}
+	return count;
+}
+
+var trap = function(arr){
+	var val = getMaxValue(arr);
+	var count = 0;
+	while (val > 0){
+		count += countInBetween(arr, val);
+		val -= 1;
+	}
+	return count;
+}
 
 
 
