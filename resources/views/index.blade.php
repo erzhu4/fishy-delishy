@@ -13,5 +13,6 @@
 
 		<a href="/vue">VUE PAGE</a>
 		<a href="/react">REACT PAGE</a>
+		<a href="/galaxy">Galaxy Game</a>
 	</body>
 </html>

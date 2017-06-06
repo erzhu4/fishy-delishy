@@ -19,5 +19,9 @@ class HomeController extends Controller {
 	public function renderReactPage(){
 		return view('react-page');
 	}
+
+	public function renderGalaxyPage(){
+		return view('galaxy-page');
+	}
 	
 }

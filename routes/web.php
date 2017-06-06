@@ -14,3 +14,4 @@
 Route::get('/', 'HomeController@index');
 Route::get('/vue', 'HomeController@renderVuePage');
 Route::get('/react', 'HomeController@renderReactPage');
+Route::get('/galaxy', 'HomeController@renderGalaxyPage');
