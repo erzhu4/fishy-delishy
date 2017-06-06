@@ -23,5 +23,9 @@ class HomeController extends Controller {
 	public function renderGalaxyPage(){
 		return view('galaxy-page');
 	}
+
+	public function renderChessPage(){
+		return view('chess-page');
+	}
 	
 }

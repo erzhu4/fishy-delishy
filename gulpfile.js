@@ -9,5 +9,6 @@ elixir(function(mix) {
 	mix.webpack('resources/assets/js/vue.js', 'public/js');
 	mix.webpack('resources/assets/js/react.js', 'public/js');
 	mix.webpack('resources/assets/js/galaxy/galaxy.js', 'public/js');
+	mix.webpack('resources/assets/js/chess/chess.js', 'public/js');
 	mix.rollup('resources/assets/js/jsx/mainComponent.jsx', 'public/js/main-react.js');
 });

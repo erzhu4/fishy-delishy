@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-    <title>INDEX</title>
+    <title>Galaxy</title>
     <head>
 
     </head>
