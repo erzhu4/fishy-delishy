@@ -27,5 +27,9 @@ class HomeController extends Controller {
 	public function renderChessPage(){
 		return view('chess-page');
 	}
+
+	public function renderBoomPage(){
+		return view('boom-page');
+	}
 	
 }

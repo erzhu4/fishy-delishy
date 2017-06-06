@@ -15,5 +15,6 @@
 		<a href="/react">REACT PAGE</a>
 		<a href="/galaxy">Galaxy Game</a>
 		<a href="/chess">Chess Game</a>
+		<a href="/boom">Boom Game</a>
 	</body>
 </html>

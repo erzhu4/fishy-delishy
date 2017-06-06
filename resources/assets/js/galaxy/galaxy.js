@@ -13,7 +13,7 @@ require('./ship.js');
 require('./spark.js');
 
 (function(){
-    var canvasEl = document.getElementsByTagName("canvas")[0];
+    var canvasEl = document.getElementById("galaxy-canvas");
     canvasEl.width = Galaxy.Game.DIM_X;
     canvasEl.height = Galaxy.Game.DIM_Y;
     var ctx = canvasEl.getContext("2d");
