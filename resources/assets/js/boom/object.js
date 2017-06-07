@@ -11,12 +11,35 @@
         this.sprite = options.sprite;
     };
 
+    Obj.prototype.onTheGround = function(){
+        return this.pos[1] >= (this.game.height - this.game.groundLevel);
+    };
+
+    Obj.prototype.belowTheGround = function(){
+        return this.pos[1] > (this.game.height - this.game.groundLevel);
+    };
+
+    Obj.prototype.bounceOfGround = function(){
+        this.vel = [this.vel[0], -(this.vel[1] - 3)];
+    };
+
+    Obj.prototype.accelerateTowardsGround = function(){
+        this.vel = [this.vel[0], this.vel[1] + 1];
+    };
+
     Obj.prototype.move = function(){
-        if (this.pos[1] < this.game.height - 30){
-            this.vel = [this.vel[0], this.vel[1] + 1];
-        } else if (this.pos[1] > this.game.height + 8) {
-            this.vel = [this.vel[0], -(this.vel[1] - 3)];
+        if (!this.onTheGround()){
+            this.accelerateTowardsGround();
+        } else if (this.onTheGround() && this.vel[1] > 0) {
+            this.bounceOfGround();
         }
+        if (this.belowTheGround()) {
+            this.pos = [this.pos[0], this.game.height - this.game.groundLevel];
+            this.vel = [this.vel[0], 0];
+        }
+
+        //put collision logic here
+
         this.pos = [this.pos[0] + this.vel[0], this.pos[1] + this.vel[1]];
     };
 

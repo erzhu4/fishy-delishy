@@ -8,18 +8,22 @@
         this.ctx = ctx;
         this.width = dem[0];
         this.height = dem[1];
+        this.groundLevel = 5;
     };
 
     boomGame.prototype.initGame = function(){
         var game = this;
         game.fireBomb();
+        // document.addEventListener('keydown', function(){
+        //     game.step();
+        // });
         this.timerId = setInterval(function(){
             game.step();
         }, 50);
     };
 
     boomGame.prototype.fireBomb = function(){
-        var bomb = new Boom.Bomb(this, [2, -35], [10, this.height]);
+        var bomb = new Boom.Bomb(this, [2, -35], [10, this.height - this.groundLevel]);
         this.objects.push(bomb);
     };
 
