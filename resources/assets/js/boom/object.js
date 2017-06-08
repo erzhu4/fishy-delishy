@@ -19,7 +19,7 @@
         return this.pos[1] > (this.game.height - this.game.groundLevel);
     };
 
-    Obj.prototype.bounceOfGround = function(){
+    Obj.prototype.bounceOffGround = function(){
         this.vel = [this.vel[0], -(this.vel[1] - 3)];
     };
 
@@ -31,7 +31,7 @@
         if (!this.onTheGround()){
             this.accelerateTowardsGround();
         } else if (this.onTheGround() && this.vel[1] > 0) {
-            this.bounceOfGround();
+            this.bounceOffGround();
         }
         if (this.belowTheGround()) {
             this.pos = [this.pos[0], this.game.height - this.game.groundLevel];

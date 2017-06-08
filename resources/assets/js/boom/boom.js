@@ -1,5 +1,5 @@
 $ = require('jquery');
-require('../inherit.js');
+require('../utils.js');
 require('./object.js');
 require('./bomb.js');
 require('./game.js');
