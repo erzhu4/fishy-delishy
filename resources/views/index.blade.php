@@ -11,7 +11,6 @@
 		<h1>Derpness</h1>
 		<div class="red-border">Hahahah</div>
 
-		<a href="/user/register">Register</a>
 		<a href="/vue">VUE PAGE</a>
 		<a href="/react">REACT PAGE</a>
 		<a href="/galaxy">Galaxy Game</a>
