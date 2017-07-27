@@ -1,4 +1,7 @@
 window.Vue = require('vue');
+Vuex = require('vuex');
+
+Vue.use(Vuex);
 
 var example = Vue.component('example', require('./components/Example.vue'));
 

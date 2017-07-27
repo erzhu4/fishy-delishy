@@ -4,15 +4,17 @@
 <head>
     <link rel = "stylesheet"
           type = "text/css"
-          href = "css/main.css" />
-    <script src="js/main.js"></script>
+          href = "/css/main.css" />
+    <script src="/js/main.js"></script>
 </head>
 <body>
     <h1>Register</h1>
-    <form action="/user/create" method="get">
-        <input name="email" type="text">
-        <input name="password" type="password">
-        <input name="password_confirm" type="password">
+    <form action="/user/create" method="post">
+        {{ csrf_field() }}
+        <label>Email<input name="email" type="text"></label>
+        <label>Password<input name="password" type="password"></label>
+        <label>Password Confirm<input name="password_confirm" type="password"></label>
+        <button>Submit</button>
     </form>
 </body>
 </html>
