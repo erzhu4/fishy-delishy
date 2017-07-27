@@ -7,6 +7,7 @@ Route::get('/galaxy', 'HomeController@renderGalaxyPage');
 Route::get('/chess', 'HomeController@renderChessPage');
 Route::get('/boom', 'HomeController@renderBoomPage');
 
-Route::get('/user/register', 'Auth\RegisterController@show');
+Auth::routes();
 
-Route::post('/user/create', 'Auth\RegisterController@create');
+Route::get('/home', 'HomeController@index')->name('home');
+
